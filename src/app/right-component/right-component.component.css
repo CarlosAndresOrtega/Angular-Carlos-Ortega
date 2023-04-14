@@ -1,0 +1,121 @@
+.add {
+  width: 100%;
+  height: 60%;
+  background: #fff;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+}
+.feed {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.Cfeed{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.Cfeed img{
+    width: 10px;
+    height: 10px;
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6);
+
+}
+.recomendaciones{
+    display: flex;
+    align-items: center;
+    gap:10px;
+    color: rgba(0, 0, 0, 0.6);
+}
+.vistos{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+.vistos div{
+    width: 100%;
+    height: auto;
+}
+.vistos div span{
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 14px;
+}
+.vistos div span img{
+    width: 14px;
+    height: 14px;
+}
+.vistos div img{
+    width: 14px;
+    height: 14px;
+}
+.vistos div span:hover{
+    color: #0a66c2;
+}
+h2 {
+  font-size: 1.4rem;
+}
+.segui{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:15px;
+}
+.info {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+}
+.info .photo {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.info img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+.name{
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+}
+.seguir{
+    width: 96px;
+    height: 32px;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+    
+}
+.seguir img{
+    width: 16px;
+    height: 16px;
+}
+.vistos {
+  width: 100%;
+  height: 40%;
+  border-radius: 25px;
+}

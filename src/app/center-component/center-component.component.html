@@ -51,7 +51,7 @@
         Publicar
       </button>
     </div>
-  
+
   </div>
   <div class="change">
     <div class="dropdown">
@@ -62,14 +62,14 @@
         {{Populares}}
         <img src="../../assets/caret-abajo.png" alt="">
         <ul class="dropdown-menu" [ngClass]="{ 'open': isMenuOpen }">
-          <li (click)="Ascendente()"><a >Ascendente</a></li>
-          <li (click)="Descendente()"><a >Descendente</a></li>
+          <li (click)="Ascendente()"><a>Ascendente</a></li>
+          <li (click)="Descendente()"><a>Descendente</a></li>
         </ul>
       </button>
-      
+
     </div>
   </div>
-  
+
   <div class="container">
     <div class="row">
       <div class="col-md-8 mt-4">
@@ -110,6 +110,9 @@
                 <div class="textBlog">
                   {{Publishing.text}}
                 </div>
+                <div class="imagen">
+                  <img src="../../assets/porfolio.png" alt="">
+                </div>
                 <div class="containerSpan">
                   <span class="number">Ver traduccion</span>
                   <div class="reactions">
@@ -127,14 +130,14 @@
                       data-test-reactions-icon-type="EMPATHY" data-test-reactions-icon-theme="light">
                   </div>
                 </div>
-  
+
               </div>
 
             </div>
           </li>
-          
+
         </ul>
-  
+
       </div>
     </div>
   </div>
