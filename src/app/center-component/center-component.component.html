@@ -1,0 +1,162 @@
+<div class="all">
+  <div class="card">
+    <div class="writte">
+      <svg style="color:  rgba(0,0,0,0.6);" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+        data-supported-dps="16x16" fill="currentColor" class="mercado-match" width="16" height="16" focusable="false">
+        <path
+          d="M15 2.53a1.51 1.51 0 01-.44 1L9.15 9 6 10l1-3.12 5.44-5.44A1.5 1.5 0 0115 2.53zM12 11a1 1 0 01-1 1H5a1 1 0 01-1-1V5a1 1 0 011-1h3V2H5a3 3 0 00-3 3v6a3 3 0 003 3h6a3 3 0 003-3V8h-2z">
+        </path>
+      </svg>
+      <div class="form-group">
+        <input type="text" placeholder="Crear publicación" (input)="changeInput($event)"
+          [(ngModel)]="selectedPublishing.text">
+      </div>
+    </div>
+    <div class="icons">
+      <div class="icon">
+        <svg style="color:  #378fe9;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24"
+          fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+          <path
+            d="M19 4H5a3 3 0 00-3 3v10a3 3 0 003 3h14a3 3 0 003-3V7a3 3 0 00-3-3zm1 13a1 1 0 01-.29.71L16 14l-2 2-6-6-4 4V7a1 1 0 011-1h14a1 1 0 011 1zm-2-7a2 2 0 11-2-2 2 2 0 012 2z">
+          </path>
+        </svg>
+        <p>Foto</p>
+      </div>
+      <div class="icon">
+        <svg style="color:  #5f9b41;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24"
+          fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+          <path d="M19 4H5a3 3 0 00-3 3v10a3 3 0 003 3h14a3 3 0 003-3V7a3 3 0 00-3-3zm-9 12V8l6 4z"></path>
+        </svg>
+        <p>Video</p>
+      </div>
+      <div class="icon">
+        <svg style="color:  #c37d16;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24"
+          fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+          <path
+            d="M3 3v15a3 3 0 003 3h12a3 3 0 003-3V3zm13 1.75A1.25 1.25 0 1114.75 6 1.25 1.25 0 0116 4.75zm-8 0A1.25 1.25 0 116.75 6 1.25 1.25 0 018 4.75zM19 18a1 1 0 01-1 1H6a1 1 0 01-1-1V9h14zm-5.9-3a1 1 0 00-1-1H12a3.12 3.12 0 00-1 .2l-1-.2v-3h3.9v1H11v1.15a3.7 3.7 0 011.05-.15 1.89 1.89 0 012 1.78V15a1.92 1.92 0 01-1.84 2H12a1.88 1.88 0 01-2-1.75 1 1 0 010-.25h1a.89.89 0 001 1h.1a.94.94 0 001-.88z">
+          </path>
+        </svg>
+        <p>Evento</p>
+      </div>
+      <div class="icon">
+        <svg style="color:  #e16745;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24"
+          fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+          <path d="M21 3v2H3V3zm-6 6h6V7h-6zm0 4h6v-2h-6zm0 4h6v-2h-6zM3 21h18v-2H3zM13 7H3v10h10z"></path>
+        </svg>
+        <p>Escribir articulo</p>
+      </div>
+    </div>
+    <div class="publicar">
+      <button *ngIf="active !==false" (click)="addOrEdit()" class="btn">
+        Publicar
+      </button>
+    </div>
+  
+  </div>
+  <div class="change">
+    <div class="dropdown">
+      <div class="barra">
+      </div>
+      <span style=" width: 120px;">Ordenar por: </span>
+      <button class="dropdown-toggle" (click)="toggleMenu()">
+        {{Populares}}
+        <img src="../../assets/caret-abajo.png" alt="">
+        <ul class="dropdown-menu" [ngClass]="{ 'open': isMenuOpen }">
+          <li (click)="Ascendente()"><a >Ascendente</a></li>
+          <li (click)="Descendente()"><a >Descendente</a></li>
+        </ul>
+      </button>
+      
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 mt-4">
+        <ul class="list-group">
+          <li *ngFor="let Publishing of PublishingArray" class="list" [class.active]="Publishing == selectedPublishing">
+            <div class="card">
+              <div class="info">
+                <div class="photo">
+                  <img src="https://random.imagecdn.app/500/150" alt="">
+                  <div class="texts">
+                    <div class="oneText">
+                      <span>Kevin O'Leary . </span>
+                      <span>Siguiendo</span>
+                    </div>
+                    <div class="oneText">
+                      <span>Chairaman</span>
+                      <span>O'Shares Investments & Beanstox</span>
+                    </div>
+                    <div class="oneText">
+                      <span>{{Publishing.date}}</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="delete">
+                  <svg (click)="openForEdit(Publishing)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                    data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24"
+                    focusable="false">
+                    <path
+                      d="M14 12a2 2 0 11-2-2 2 2 0 012 2zM4 10a2 2 0 102 2 2 2 0 00-2-2zm16 0a2 2 0 102 2 2 2 0 00-2-2z">
+                    </path>
+                  </svg>
+                  <button *ngIf="selectedPublishing.id !==0" class="btn btn-danger" (click)="delete()">
+                    Delete
+                  </button>
+                </div>
+              </div>
+              <div class="blog">
+                <div class="textBlog">
+                  {{Publishing.text}}
+                </div>
+                <div class="containerSpan">
+                  <span class="number">Ver traduccion</span>
+                  <div class="reactions">
+                    <img
+                      class="reactions-icon social-detail-social-counts__count-icon social-detail-social-counts__count-icon--0 reactions-icon__consumption--small data-test-reactions-icon-type-LIKE data-test-reactions-icon-theme-light"
+                      src="https://static.licdn.com/sc/h/8ekq8gho1ruaf8i7f86vd1ftt" alt="like"
+                      data-test-reactions-icon-type="LIKE" data-test-reactions-icon-theme="light">
+                    <img
+                      class="reactions-icon social-detail-social-counts__count-icon social-detail-social-counts__count-icon--1 reactions-icon__consumption--small reactions-icon--stacked data-test-reactions-icon-type-PRAISE data-test-reactions-icon-theme-light"
+                      src="https://static.licdn.com/sc/h/b1dl5jk88euc7e9ri50xy5qo8" alt="celebrate"
+                      data-test-reactions-icon-type="PRAISE" data-test-reactions-icon-theme="light">
+                    <img
+                      class="reactions-icon social-detail-social-counts__count-icon social-detail-social-counts__count-icon--1 reactions-icon__consumption--small reactions-icon--stacked data-test-reactions-icon-type-EMPATHY data-test-reactions-icon-theme-light"
+                      src="https://static.licdn.com/sc/h/cpho5fghnpme8epox8rdcds22" alt="love"
+                      data-test-reactions-icon-type="EMPATHY" data-test-reactions-icon-theme="light">
+                  </div>
+                </div>
+  
+              </div>
+  
+              <!-- <span class="badge badge-primary" style="background-color:aqua ; color: white;">{{Publishing.id}}</span> {{Publishing.text}} - {{Publishing.date}} -->
+            </div>
+          </li>
+          <!-- <div class="card mt-4">
+            <div class="card-body">
+              <div class="card-title">
+                Insert a new employe
+              </div>
+              <div class="form-group">
+                <input type="text" [(ngModel)]="selectedPublishing.text" placeholder="Inset a Name" class="form-control">
+              </div>
+              <div class="form-group">
+                <input type="text" [(ngModel)]="selectedPublishing.date" placeholder="Inset a Country"
+                  class="form-control">
+              </div>
+              <button (click)="addOrEdit()" class="btn btn-primary">
+                Submit
+              </button>
+              <button *ngIf="selectedPublishing.id !==0" class="btn btn-danger" (click)="delete()">
+                Delete
+              </button>
+            </div>
+          </div> -->
+        </ul>
+  
+      </div>
+    </div>
+  </div>
+
+</div>
