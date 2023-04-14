@@ -1,6 +1,82 @@
-
-.nav{
-    width: 100%;
-    height: 50px;
-    background-color: aqua;
+.nav {
+  width: 100%;
+  height: 50px;
+  background-color: #fff;
+  display: flex;
+}
+.left {
+  width: 50%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.containerFind {
+  width: 280px;
+  height: 35px;
+  background-color: yellow;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: #eef3f8;
+}
+.left svg {
+  color: #0a66c2;
+  width: 40px;
+  height: 40px;
+}
+.containerFind svg {
+  color: rgba(0, 0, 0, 0.6);
+  width: 16px;
+  height: 16px;
+}
+.containerFind input {
+  background-color: #eef3f8;
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+.rigth {
+  width: 50%;
+  height: auto;
+  display: flex;
+}
+.right .icons {
+  width: 100%;
+  display: flex;
+}
+.icon {
+  width: 80px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.6);
+}
+.icon span {
+  font-size: 14px;
+}
+.icon img {
+  height: 24px;
+  width: 24px;
+  border-radius: 50px;
+}
+.icons {
+  display: flex;
+  gap: 10px;
+}
+.icon span img {
+  height: 10px;
+  width: 10px;
+  border-radius: 50px;
+}
+.icons .negocios svg {
+  width: 24px;
+  height: 24px;
+}
+.icons .negocios span {
+  width: 100px;
+  height: 19px;
 }
