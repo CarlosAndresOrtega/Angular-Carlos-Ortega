@@ -8,8 +8,9 @@
         </path>
       </svg>
       <div class="form-group">
-        <input type="text" placeholder="Crear publicación" (input)="changeInput($event)"
-          [(ngModel)]="selectedPublishing.text">
+        <input  type="text" placeholder="Crear publicación" (input)="changeInput($event)" [(ngModel)]="textInput" [disabled]="isEdit"
+        >
+          <!-- [(ngModel)]="selectedPublishing.text" -->
       </div>
     </div>
     <div class="icons">
@@ -101,7 +102,7 @@
                       d="M14 12a2 2 0 11-2-2 2 2 0 012 2zM4 10a2 2 0 102 2 2 2 0 00-2-2zm16 0a2 2 0 102 2 2 2 0 00-2-2z">
                     </path>
                   </svg>
-                  <button *ngIf="selectedPublishing.id !==0" class="btn btn-danger" (click)="delete()">
+                  <button *ngIf="selectedPublishing.id !==0 && Publishing.id==selectedPublishing.id && isEdit==true" class="btn btn-danger" (click)="delete()">
                     Delete
                   </button>
                 </div>
